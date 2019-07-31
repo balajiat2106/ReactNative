@@ -21,7 +21,7 @@ import Login from './src/pages/login';
 const App = () => {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="grey" barStyle="light"/>
+      <StatusBar backgroundColor="#1c313a" barStyle="light"/>
     <Login/>
     </View>
   );
@@ -30,7 +30,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:'#455a67',
+    backgroundColor:'#455a64',
     alignItems:"center",
     justifyContent:"center"
   }

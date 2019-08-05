@@ -8,21 +8,19 @@
 
 import React, {Fragment} from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
-  Text,
   StatusBar,
 } from 'react-native';
 
-import Login from './src/pages/login';
-
+import Routes from "./src/routes";
+import Signup from "./src/pages/signup";
 const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#1c313a" barStyle="light"/>
-    <Login/>
+    <Routes/>
+
     </View>
   );
 };

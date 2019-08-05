@@ -6,22 +6,22 @@ import Logo from '../components/logo';
 import Form from '../components/form';
 import {Actions} from 'react-native-router-flux';
 
-export default class login extends Component{
-    signUp(){
-        Actions.signup()
+export default class signup extends Component{
+    signIn(){
+        Actions.login();
     }
-    render(){
+      render(){
     return(
         <View style={styles.container}>
         <Logo/>
-        <Form name="Login"/>
+        <Form name="Signup"/>
         <View style={styles.signUpTextView}>
-            <Text style={styles.noAccountSetup}>Don't have an account?</Text>
-            <TouchableOpacity onPress={this.signUp}><Text style={styles.signUpText}> Signup</Text></TouchableOpacity>
+            <Text style={styles.noAccountSetup}>Already have an account?</Text>
+            <TouchableOpacity onPress={this.signIn}><Text style={styles.signUpText}> SignIn</Text></TouchableOpacity>
         </View>
         </View>
     );
-    }
+      }
 };
 
 const styles=StyleSheet.create({
@@ -47,9 +47,5 @@ const styles=StyleSheet.create({
         color:"#fff",
         marginBottom:10,
         fontSize:18
-    },
-TxtHighlight:{
-    color:'#fff',
-    fontSize:25
-}
+    }
 });

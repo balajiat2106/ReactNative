@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import {View,TextInput,StyleSheet,TouchableOpacity,Text} from 'react-native';
 
-const form=()=>{
+export default class form extends Component{
+    constructor(props) {
+        super(props);
+      };
+      render(){
 return(
     <View style={styles.container}>
     <TextInput style={styles.inputBox} placeholder="Email" placeholderTextColor="#fff"></TextInput>
     <TextInput style={styles.inputBox} placeholder="Password" secureTextEntry={true} placeholderTextColor="#fff"></TextInput>
-    <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Login</Text></TouchableOpacity>
-    <View style={styles.signUpTextView}>
-        <Text style={styles.noAccountSetup}>Don't have an account?</Text><Text style={styles.signUpText}> Signup</Text>
-        </View>
+    <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>{this.props.name}</Text></TouchableOpacity>
+    
     </View>);
+      }
 };
 
 const styles=StyleSheet.create({
@@ -44,21 +47,6 @@ const styles=StyleSheet.create({
         width:300,
         marginTop:30
     },
-    signUpTextView:{
-        marginBottom:10,
-        flexDirection:"row",
-        justifyContent:"center",
-        paddingVertical:15
-    },
-    noAccountSetup:{
-        color:"#90a4ae",
-        fontSize:15
-    },
-    signUpText:{
-        color:"#fff",
-        marginBottom:10,
-        fontSize:18
-    }
+    
+    
 });
-
-export default form;
